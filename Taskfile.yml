@@ -1,0 +1,31 @@
+version: '3'
+
+tasks:
+  build: 
+    desc: Build application with docker
+    cmds:
+      - docker build --tag nathanfirmo/rinha-de-backend-2024-q1:latest .
+
+  up: 
+    desc: Start project in docker compose
+    cmds:
+      - docker compose down --remove-orphans
+      - docker compose up
+
+  build-and-up:
+    desc: Build and start project
+    cmds:
+      - task: build
+      - task: up
+
+  run: 
+    desc: Run code with go run
+    cmds:
+      - go run ./cmd/api
+
+  default:
+    desc: List all tasks
+    cmds:
+      - task -a
+
+silent: true
