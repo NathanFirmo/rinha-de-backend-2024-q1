@@ -5,7 +5,7 @@ go 1.21.6
 require (
 	github.com/bytedance/sonic v1.10.2
 	github.com/gofiber/fiber/v2 v2.52.0
-	github.com/jackc/pgx/v5 v5.5.3
+	github.com/jackc/pgx/v5 v5.5.4
 	github.com/joho/godotenv v1.5.1
 )
 
